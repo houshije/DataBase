@@ -1,6 +1,10 @@
 #ifndef _MD5_H
 #define _MD5_H
 
+#ifdef _cplusplus
+extern "C" {
+#endif
+
 typedef struct
 {
     unsigned int count[2];
@@ -45,5 +49,9 @@ typedef struct
 void Md5Init(MD5_CTX *inContext);
 void Md5Update(MD5_CTX *inContext, unsigned char *inStr, unsigned int inStrLen);
 void Md5Final(MD5_CTX *inContext, unsigned char digest[16]);
+
+#ifdef _cplusplus
+}
+#endif
 
 #endif

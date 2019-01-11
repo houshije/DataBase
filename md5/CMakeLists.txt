@@ -1,18 +1,11 @@
 cmake_minimum_required(VERSION 3.5.0)
 
-project(Customer_MD5 CXX)
+project(MD5 C)
 
 include_directories(.)
 
-if (CMAKE_BUILD_TYPE MATCHES "Debug")
-    add_definitions(-g)
-    set(CMAKE_DEBUG_POSTFIX  "d")
-else ()
-    set(LIB_SUFFIX )
-endif ()
-
 set(SRCS
-    md5.cpp
+    md5.c
 )
 
 add_library(md5 SHARED ${SRCS})
